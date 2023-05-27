@@ -11,6 +11,7 @@
 using namespace std;
 
 class Kino {
+private:
     std::string naziv;
     std::vector<Film> filmovi;
     std::vector<Dvorana> dvorane;
@@ -18,10 +19,11 @@ class Kino {
     std::vector<Zaposlenik> zaposlenici;
 
 public:
-    Kino(const std::string& nazivKina) : naziv(nazivKina) {}
 
 
     std::string getNaziv();
+
+    void setNaziv(string naziv);
     std::vector<Film> getFilmovi();
 
     std::vector<Dvorana> getDvorane();
@@ -46,4 +48,5 @@ public:
 
     void obrisiZaposlenika(string zaposlenikZaBrisanje);
 ;
+    void ispisiRadnike();
 };
