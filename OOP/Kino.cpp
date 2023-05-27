@@ -5,6 +5,11 @@ std::string Kino::getNaziv()
     return naziv;
 }
 
+void Kino::setNaziv(string naziv)
+{
+    this->naziv = naziv;
+}
+
 std::vector<Film> Kino::getFilmovi()
 {
     return filmovi;
@@ -105,5 +110,14 @@ void Kino::obrisiZaposlenika(string zaposlenikZaBrisanje)
 
     }
     cout << "Nije pronadjen zaposlenik sa tim imenom!";
+}
+
+void Kino::ispisiRadnike()
+{
+    std::cout << "Radnici u kinu " << naziv << ":" << std::endl;
+    for (auto& radnik : zaposlenici) {
+        std::cout << radnik.getIme() << " " << radnik.getPrezime() << std::endl;
+    }
+
 }
 
